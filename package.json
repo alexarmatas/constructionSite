@@ -1,0 +1,22 @@
+{
+  "name": "constructionsite",
+  "version": "1.0.0",
+  "description": "Responsive Construction Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexarmatas/constructionSite.git"
+  },
+  "author": "Alexander Armatas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexarmatas/constructionSite/issues"
+  },
+  "homepage": "https://github.com/alexarmatas/constructionSite#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
