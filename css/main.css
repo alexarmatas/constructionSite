@@ -1,5 +1,82 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Mukta:400,600&display=swap");
+.slideshow-container {
+  position: relative;
+  margin: auto; }
+
+.mySlides {
+  display: none; }
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; }
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center; }
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0; }
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.6s ease; }
+
+.active,
+.dot:hover {
+  background-color: #717171; }
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: 0.4; }
+  to {
+    opacity: 1; } }
+
 * {
   box-sizing: border-box; }
 
@@ -37,7 +114,10 @@ header {
 .bubble {
   position: absolute;
   z-index: 0;
-  background: blue; }
+  border-bottom: solid;
+  padding: 1rem;
+  opacity: 0;
+  transition: ease-out 0.2s; }
 
 .bottomHeader {
   display: flex;
@@ -48,24 +128,19 @@ header {
     margin: 5px 20px; }
 
 .navLinks {
-  list-style: none; }
+  list-style: none;
+  cursor: pointer; }
   .navLinks > li {
     display: inline-block;
     padding: 0px 20px; }
 
 li,
-a,
-button {
+a {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #1e306e;
   text-decoration: none; }
-  li:hover,
-  a:hover,
-  button:hover {
-    transition: all 0.5s ease-out;
-    color: #1e306e; }
 
 .logo {
   cursor: pointer;
