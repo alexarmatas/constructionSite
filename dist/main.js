@@ -38,22 +38,21 @@ nav.addEventListener("mouseover", () => {
   });
 });
 
-//Slide Functionality
 var slideIndex = 1;
+showSlides(slideIndex);
 
-//next / previous controls
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
-//Thumbnail image control
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
+  let i;
+  var slides = document.getElementsByClassName("slides");
+  var texts = document.getElementsByClassName("text");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
     slideIndex = 1;
@@ -62,12 +61,13 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
-    console.log(slideIndex);
     slides[i].style.display = "none";
+    texts[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex - 1].style.display = "block";
+  texts[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }

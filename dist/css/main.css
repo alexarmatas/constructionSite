@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Mukta:400,600&display=swap");
 .slideshow-container {
+  max-width: 1600px;
   position: relative;
   margin: auto; }
 
-.mySlides {
+.slides {
+  width: 100%;
+  height: auto;
   display: none; }
 
 .prev,
@@ -17,43 +20,39 @@
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 3rem;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none; }
   .prev:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.8); }
+    background-color: rgba(113, 113, 113, 0.6); }
 
 .next {
   right: 0;
   border-radius: 3px 0 0 3px; }
 
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px black;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
-  text-align: center; }
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0; }
+  text-align: center;
+  transition: 0.3s ease;
+  display: none; }
 
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 4px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: 0.6s ease; }
+  transition: background-color 0.6s ease; }
 
 .active,
 .dot:hover {
@@ -81,7 +80,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #4e5e6b;
+  background: #f6f6f6;
   color: #1e306e;
   height: 100%;
   margin: 0;
