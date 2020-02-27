@@ -1,5 +1,6 @@
 @import "config";
 @import "slides";
+@import "slideServices";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Mukta:400,600&display=swap");
 * {
@@ -42,7 +43,11 @@ header {
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 1);
+  box-shadow: 0 2px 2px 1 rgba(0, 0, 0, 1);
+}
+
+.logo {
+  margin: 0;
 }
 
 .bubble {
@@ -58,9 +63,13 @@ header {
   display: flex;
   justify-content: center;
   background: #f6f6f6;
+  padding: 5px 0px;
+
   color: darken($color: $secondary-color, $amount: 40);
   > p {
     margin: 5px 20px;
+    font-weight: 350;
+    font-size: 1rem;
   }
 }
 
@@ -94,4 +103,78 @@ a {
     font-weight: 600;
     font-size: 30px;
   }
+}
+
+//Bottom Half
+
+.certColumns {
+  padding-top: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#certACI {
+  padding-top: 5px;
+}
+
+.certLogo {
+  padding: 0px 20px;
+  width: 125px;
+  height: auto;
+}
+
+.certParagraph {
+  position: absolute;
+  left: 50%;
+  margin-left: -55px;
+  bottom: -15px;
+  > span {
+    font-size: 9px;
+  }
+}
+
+.get-done {
+  text-align: center;
+  margin-left: 20px;
+  font-size: 2em;
+}
+
+.step-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.step-col {
+  margin-left: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.step-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > h2 {
+    font-size: 1rem;
+    margin: 15px 0 0 0;
+  }
+
+  > p {
+    font-size: 0.75rem;
+    margin: 0;
+  }
+}
+
+.listServices {
+  position: relative;
+}
+
+.list-columns {
+  display: flex;
+  flex-direction: column;
 }
