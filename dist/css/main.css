@@ -76,6 +76,10 @@
   to {
     opacity: 1; } }
 
+.list-services-div {
+  display: flex;
+  flex-direction: column; }
+
 .visual-with-text {
   padding-top: 72px;
   display: flex;
@@ -186,6 +190,22 @@ header {
     display: inline-block;
     padding: 0px 20px; }
 
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px; }
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ec9706;
+  border-radius: 10px; }
+
 li,
 a {
   font-family: "Montserrat", sans-serif;
@@ -253,3 +273,20 @@ a {
   .step-text > p {
     font-size: 0.75rem;
     margin: 0; }
+
+@media screen and (max-width: 500px) {
+  .toggle-button {
+    display: flex; }
+  .navLinks {
+    /*display: none;*/ }
+  .step-container {
+    display: block; }
+  .visual-with-text {
+    flex-direction: column; }
+  .visual-column,
+  .text-column {
+    width: 100%; }
+  .visual-with-text:nth-child(2) > .visual-column {
+    order: -1; }
+  .topHeader {
+    display: none; } }

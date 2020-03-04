@@ -1,0 +1,41 @@
+// Widescreens
+@include mediaXL {
+}
+// Deskstops + Laptops
+@include mediaLg {
+}
+// tablet + small laptop
+@include mediaMd {
+}
+// smartphones
+@include mediaSm {
+  //navbar mobile
+  .toggle-button {
+    display: flex;
+  }
+
+  .navLinks {
+    /*display: none;*/
+  }
+
+  .step-container {
+    display: block;
+  }
+  .visual-with-text {
+    flex-direction: column;
+  }
+  .visual-column,
+  .text-column {
+    width: 100%;
+  }
+
+  .visual-with-text:nth-child(2) {
+    > .visual-column {
+      order: -1;
+    }
+  }
+
+  .topHeader {
+    display: none;
+  }
+}
