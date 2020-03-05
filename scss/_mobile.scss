@@ -10,14 +10,43 @@
 // smartphones
 @include mediaSm {
   //navbar mobile
-  .toggle-button {
-    display: flex;
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .centerHeader {
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
   }
 
   .navLinks {
-    /*display: none;*/
+    text-align: center;
+    width: 100%;
+    transition: ease-out;
+    display: block;
+    padding: 0;
+
+    > li {
+      display: block;
+      padding-top: 10px;
+      border-bottom: 1px solid $secondary-color;
+      &:hover {
+        background-color: rgba(#717171, 0.6);
+      }
+    }
   }
 
+  .step-col {
+    margin-left: 0;
+  }
+
+  .bubble {
+    display: none;
+  }
   .step-container {
     display: block;
   }

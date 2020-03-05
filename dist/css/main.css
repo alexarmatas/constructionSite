@@ -183,6 +183,15 @@ header {
     font-weight: 350;
     font-size: 1rem; }
 
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none; }
+
+#toggle {
+  display: none; }
+
 .navLinks {
   list-style: none;
   cursor: pointer; }
@@ -275,10 +284,29 @@ a {
     margin: 0; }
 
 @media screen and (max-width: 500px) {
-  .toggle-button {
-    display: flex; }
+  label {
+    display: block;
+    cursor: pointer; }
+  .centerHeader {
+    flex-direction: column; }
+  nav {
+    width: 100%; }
   .navLinks {
-    /*display: none;*/ }
+    text-align: center;
+    width: 100%;
+    transition: ease-out;
+    display: block;
+    padding: 0; }
+    .navLinks > li {
+      display: block;
+      padding-top: 10px;
+      border-bottom: 1px solid #ec9706; }
+      .navLinks > li:hover {
+        background-color: rgba(113, 113, 113, 0.6); }
+  .step-col {
+    margin-left: 0; }
+  .bubble {
+    display: none; }
   .step-container {
     display: block; }
   .visual-with-text {
