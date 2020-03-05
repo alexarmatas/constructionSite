@@ -15,6 +15,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 //header
@@ -198,6 +199,16 @@ a {
     font-size: 0.75rem;
     margin: 0;
   }
+}
+//Fade in
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
 }
 
 @import "mobile";

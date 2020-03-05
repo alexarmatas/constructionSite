@@ -68,3 +68,18 @@
     display: none;
   }
 }
+
+//remove transitions
+
+.from-left {
+  transform: translateX(0);
+}
+
+.from-right {
+  transform: translateX(0);
+}
+
+.from-left,
+.from-right {
+  transition: none;
+}
