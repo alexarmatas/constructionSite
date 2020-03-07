@@ -1,45 +1,5 @@
-const nav = document.querySelector("nav");
-const navLinks = document.querySelector(".navLinks");
-const navchildNodes = navLinks.childNodes;
-const bubble = document.querySelector(".bubble");
-
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
-
-//Navbar Function
-function setBubble() {
-  const coords = this.getBoundingClientRect();
-  const directions = {
-    height: coords.height,
-    width: coords.width,
-    top: coords.top,
-    left: coords.left
-  };
-  bubble.style.opacity = 1;
-  bubble.style.setProperty("left", `${directions.left}px`);
-  bubble.style.setProperty("top", `${directions.top}px`);
-  bubble.style.setProperty("width", `${directions.width}px`);
-  bubble.style.setProperty("height", `${directions.height}px`);
-}
-
-nav.addEventListener("mouseleave", () => {
-  navchildNodes.forEach(node => {
-    if (node.nodeType == 1) {
-      node.removeEventListener("mouseover", setBubble);
-    }
-  });
-  bubble.style.opacity = 0;
-});
-
-nav.addEventListener("mouseover", () => {
-  navchildNodes.forEach(node => {
-    if (node.nodeType == 1) {
-      if (node.tagName == "LI") {
-        node.addEventListener("mouseover", setBubble);
-      }
-    }
-  });
-});
 
 var slideIndex = 1;
 showSlides(slideIndex);
