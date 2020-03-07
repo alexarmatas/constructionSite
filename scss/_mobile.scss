@@ -44,9 +44,6 @@
     margin-left: 0;
   }
 
-  .bubble {
-    display: none;
-  }
   .step-container {
     display: block;
   }
@@ -67,19 +64,18 @@
   .topHeader {
     display: none;
   }
-}
 
-//remove transitions
+  .from-left {
+    transform: translateX(0);
+  }
 
-.from-left {
-  transform: translateX(0);
-}
+  .from-right {
+    transform: translateX(0);
+  }
 
-.from-right {
-  transform: translateX(0);
-}
-
-.from-left,
-.from-right {
-  transition: none;
+  // AboutUs
+  .employee-col {
+    flex-direction: column;
+    margin: 5px 0px;
+  }
 }
