@@ -47,3 +47,22 @@
   line-height: 48px;
   text-shadow: 1px 1px 2px darken($color: $secondary-color, $amount: 40);
 }
+
+.grid-container {
+  padding-top: 30px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "service-1 service-2"
+    "service-3 service-4"
+    "service-5 service-6"
+    "service-7 service-8";
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.service {
+  background: white;
+  text-align: center;
+  padding: 0.3rem;
+  border-bottom: $secondary-color 3px solid;
+}
