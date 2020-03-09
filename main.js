@@ -1,6 +1,3 @@
-const faders = document.querySelectorAll(".fade-in");
-const sliders = document.querySelectorAll(".slide-in");
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -34,6 +31,8 @@ function showSlides(n) {
   texts[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
 
 const appearOptions = {
   threshold: 0,
