@@ -2,6 +2,7 @@
 @import "slides";
 @import "slideServices";
 @import "aboutUs";
+@import "services";
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Mukta:400,600&display=swap");
@@ -86,11 +87,14 @@ label {
   > li {
     display: inline-block;
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
-    border-bottom: 1px solid transparent;
-
-    &:hover {
-      border-bottom: 1px solid $secondary-color;
+    > a {
+      border-bottom: opacity 0;
+      font-size: 20px;
+      &:hover {
+        border-bottom: 1px solid $secondary-color;
+        border-bottom: opacity 1;
+        transition: all 0.1s ease;
+      }
     }
   }
 }

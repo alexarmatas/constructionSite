@@ -5,27 +5,50 @@
   > h1 {
     position: absolute;
     text-align: center;
+    color: #ffffff;
     font-weight: 500;
     font-size: 4em;
     bottom: 20px;
     width: 100%;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: darken($primary-color, 5%);
+    text-shadow: 1px 1px 2px darken($color: $secondary-color, $amount: 40);
   }
 }
 
 .top-image {
   width: 100%;
+  display: block;
   height: auto;
 }
 
+.middle-text.container {
+  max-width: 1350;
+  position: relative;
+  margin: auto;
+  text-align: justify;
+}
+
 .middle-text {
+  transition: opacity 200ms ease-in-out;
   > h1 {
     margin-left: 10px;
   }
   > p {
-    text-align: justify;
     margin: 10px 20px 40px 20px;
+    color: darken($color: $secondary-color, $amount: 40);
+  }
+}
+//contact us banner
+.contact-us-banner {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  background: $secondary-color;
+
+  > p {
+    font-size: 1rem;
+    margin: 0;
+    color: white;
   }
 }
 
@@ -63,5 +86,30 @@
       margin: 0;
       padding: 0;
     }
+  }
+}
+
+.fadeAbout {
+  -webkit-animation-name: fadeAbout;
+  -webkit-animation-duration: 2s;
+  animation-name: fadeAbout;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeAbout {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeAbout {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
