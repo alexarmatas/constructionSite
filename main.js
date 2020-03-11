@@ -1,3 +1,5 @@
+//Index Slider
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -31,6 +33,8 @@ function showSlides(n) {
   texts[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+//Transition Effects
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
 
@@ -61,3 +65,46 @@ faders.forEach(fader => {
 sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
+
+//Gallery Images
+function imgClick(e) {
+  current.src = e.target.src;
+}
+
+function galleryLoad() {
+  //Roofs Gallery
+  const currentRoof = document.querySelector("#current-roof");
+  const imgsRoofing = document.querySelectorAll(".imgs-roofing img");
+  const opacity = 0.6;
+  imgsRoofing[0].style.opacity = opacity;
+
+  imgsRoofing.forEach(img => {
+    img.addEventListener("click", e => {
+      imgsRoofing.forEach(img => {
+        img.style.opacity = 1;
+      });
+      currentRoof.src = e.target.src;
+      //add fade class
+      currentRoof.classList.add("fade-gallery");
+      //remove fade class after .5s
+      setTimeout(() => currentRoof.classList.remove("fade-gallery"), 500);
+      e.target.style.opacity = opacity;
+    });
+  });
+
+  const currentBathroom = document.querySelector("#current-bathroom");
+  const imgsBathroom = document.querySelectorAll(".imgs-bathroom img");
+  imgsBathroom[0].style.opacity = opacity;
+
+  imgsBathroom.forEach(img => {
+    img.addEventListener("click", e => {
+      imgsBathroom.forEach(img => {
+        img.style.opacity = 1;
+      });
+      currentBathroom.src = e.target.src;
+      currentBathroom.classList.add("fade-gallery");
+      setTimeout(() => currentBathroom.classList.remove("fade-gallery"), 500);
+      e.target.style.opacity = opacity;
+    });
+  });
+}
