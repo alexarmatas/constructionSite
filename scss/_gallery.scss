@@ -1,0 +1,44 @@
+.container-gallery {
+  max-width: 500px;
+  margin: auto;
+  border: $secondary-color solid 3px;
+  background: #fff;
+}
+
+.main-img img,
+.imgs-grid img {
+  width: 100%;
+}
+
+.imgs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.gallery-flex-row {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 120px;
+}
+
+.gallery-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  > h2 {
+    text-align: center;
+  }
+}
+
+//fade in animation for gallery
+
+@keyframes fadeGallery {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-gallery {
+  opacity: 0;
+  animation: fadeGallery 0.5s ease-in 1 forwards;
+}

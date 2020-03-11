@@ -33,8 +33,11 @@
     margin-left: 10px;
   }
   > p {
-    margin: 10px 20px 40px 20px;
-    color: darken($color: $secondary-color, $amount: 40);
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.6;
+    line-height: 1.375;
   }
 }
 //contact us banner
